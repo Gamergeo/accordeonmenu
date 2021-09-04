@@ -1,0 +1,34 @@
+.plugin_accordeon_menu_group {
+	background-color: black;
+}
+
+.plugin_accordeon_menu_item {
+	background-color: grey;
+	height: 100px;
+	
+	display: flex;
+	align-items: center;
+}
+
+.plugin_accordeon_menu_item:hover {
+	background-color: white;
+}
+
+.plugin_accordeon_menu_subMenuItem {
+	min-height: 30px;
+	margin-left: auto;
+	width: 80%;
+}
+
+.plugin_accordeon_menu_subMenuItem:hover {
+	background-color: white;
+}
+
+.plugin_accordeon_menu_menuItem.plugin_accordeon_menu_selected {
+	background-color: red;
+}
+
+.plugin_accordeon_menu_subMenuItem.plugin_accordeon_menu_selected  > .label {
+	background-color: red;
+}
+

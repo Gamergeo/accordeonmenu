@@ -87,7 +87,6 @@
                   					<target>target/META-INF/resources/webjars/plugin/accordeonMenu/plugin.js</target>
                   					<sources>
                     					<source>src/main/resources/js/element/accordeonMenu.js</source>
-                    					<source>src/main/resources/js/P_accordeon.js</source>
                   					</sources>
                 				</merger>
               				</mergers>

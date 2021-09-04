@@ -7,11 +7,15 @@ $.fn.accordeonMenu = function () {
 	
 		let menu = $(this);
 		
-		$(this).children("div").each(function(i, menuGroup) {
+		// Each menu group
+		$(this).children("div").each(function() {
 			
-			let menuItem = $(menuGroup).children().first();
-			let subMenu = $(menuGroup).children().last();
+			let menuGroup = $(this);
 			
+			let menuItem = menuGroup.children().first();
+			let subMenu = menuGroup.children().last();
+			
+			menuGroup.addClass('plugin_accordeon_menu_group');
 			menuItem.addClass('plugin_accordeon_menu_item');
 			subMenu.addClass('plugin_accordeon_menu_subMenu');
 			
@@ -28,6 +32,18 @@ $.fn.accordeonMenu = function () {
 					menuItem.addClass("plugin_accordeon_menu_selected");
 					subMenu.show();
 				}
+			});
+			
+			// Each sub menu item
+			subMenu.children("div").each(function() {
+				
+				let subMenuItem = $(this);
+				subMenuItem.addClass('plugin_accordeon_menu_subMenuItem');
+				
+				subMenuItem.click(() => {
+					menu.find('.plugin_accordeon_menu_subMenuItem').removeClass('plugin_accordeon_menu_selected');
+					subMenuItem.addClass("plugin_accordeon_menu_selected");
+				});
 			});
 		});
 	});
